@@ -60,9 +60,9 @@ class NodoArbolB(object):
 		self._desplazar_(temp, pos+1)
 
 	def _partir_(self, elemento, pos):
-		temp = self.elementos[int(len(self.elementos)):]
-		self.elementos = self.elementos[:int(len(self.elementos))]
-		if pos > len(self.elementos):
+		temp = self.elementos[int(len(self.elementos)/2):]
+		self.elementos = self.elementos[:int(len(self.elementos)/2)]
+		if pos > int(len(self.elementos)/2):
 			temp.append(elemento)
 		else:
 			self.insertar(elemento)
